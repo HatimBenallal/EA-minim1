@@ -1,0 +1,33 @@
+<form class="form"   [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+   
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>User</mat-label>
+        <input matInput formControlName="user">
+      </mat-form-field>
+    </p>
+  
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>DarkMode</mat-label>
+        <input matInput formControlName="darkMode">
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Lenguage</mat-label>
+          <input matInput formControlName="lenguage">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>letter size</mat-label>
+          <input matInput formControlName="letterSize">
+        </mat-form-field>
+    </p>
+    
+    <p>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!settingsForm.valid">Submit</button>
+    </p>
+  
+  </form>

@@ -1,0 +1,33 @@
+ <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Name of the route</mat-label>
+        <input matInput formControlName="route">
+      </mat-form-field>
+    </p>
+  
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>User name</mat-label>
+        <input matInput formControlName="user">
+      </mat-form-field>
+    </p>
+  
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Selected Stop Point of the route</mat-label>
+        <input matInput formControlName="selectedStop">
+      </mat-form-field>
+    </p>
+    <p>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!bookingForm.valid">Submit</button>
+    </p>
+  
+  </form>
+  

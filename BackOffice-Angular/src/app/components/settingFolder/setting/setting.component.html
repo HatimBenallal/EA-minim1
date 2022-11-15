@@ -1,0 +1,38 @@
+<div class="booking">
+    <mat-card class="card">
+        <mat-card-header style="justify-content: center;">
+           <mat-card-title>SETTING INFORMATION</mat-card-title>
+        </mat-card-header>
+        <div class="divider"></div>
+        <mat-card-content>
+            <div class="container">
+                <h2>General Information</h2> 
+                <div class="content">
+                    <h4>Setting ID: {{settings._id}}</h4>
+                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="header"><mat-icon class="icon">perm_identity</mat-icon><h2 class="title">User Information</h2></div> 
+                <div class="content">
+                    <h4>User ID: {{settings.user._id}}</h4>
+                    <h4>User: {{settings.user.name}}</h4>
+                    <h4>Email: {{settings.user.email}}</h4>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header"><mat-icon class="icon"> directions_car</mat-icon><h2 class="title">Settings Information</h2> </div>
+                <div class="content">
+                    <h4>Dark Mode {{settings.darkMode}}</h4>
+                    <h4>Lenguage: {{settings.lenguage}}</h4>
+                    <h4>Letter Size: {{settings.letterSize}}</h4>
+                    
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions style="margin: 10px;">
+            <button mat-raised-button color="warn" (click)="deleteOne()">delete</button>
+            
+        </mat-card-actions>
+    </mat-card>
+</div>
